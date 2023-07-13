@@ -1,0 +1,53 @@
+.Header {
+  background-color: white;
+
+  display: flex;
+  flex-direction: row;
+  position: sticky;
+  top: 0;
+
+  width: 100vw;
+  height: 60px;
+
+  padding: 30px 0px;
+  margin-bottom: 10px;
+
+  border-color: black;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+
+  align-items: center;
+  justify-content: center;
+}
+
+.LeftView {
+  margin-left: 40px;
+  width: 300px;
+}
+
+.item > a {
+  font-weight: inherit;
+  padding: 20px;
+  font-size: 17px;
+  color: #000;
+  text-decoration: none;
+}
+
+.LogoView {
+  flex: 1;
+  display: flex;
+
+  justify-content: center;
+}
+
+.Logo {
+  width: 50px;
+  height: 50px;
+}
+
+.RightView {
+  margin-right: 40px;
+  width: 300px;
+  display: flex;
+  justify-content: end;
+}
