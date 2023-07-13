@@ -1,31 +1,20 @@
 import "./App.css";
-import { useEffect, useState } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./page/Home";
+import Cat from "./page/Cat";
+import Dog from "./page/Dog";
+import Others from "./page/Others";
 
 function App() {
-  const [catImages, setCatImages] = useState([]);
-
-  useEffect(() => {
-    fetchCatImages();
-  }, []);
-
-  const fetchCatImages = async () => {
-    const response = await fetch(
-      `https://api.unsplash.com/photos/random?count=15&query=cat&client_id=${process.env.REACT_APP_UNSPLASH_TOKEN}`
-    );
-    const data = await response.json();
-    const imageUrls = data.map(
-      (image: { [key: string]: any }) => image.urls.regular
-    );
-
-    setCatImages(imageUrls);
-  };
-
   return (
-    <div className="App">
-      {catImages.map((imageUrl) => (
-        <img className="Image" src={imageUrl} alt="Cat" />
-      ))}
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/CAT" element={<Cat />} />
+        <Route path="/DOG" element={<Dog />} />
+        <Route path="/OTHERS" element={<Others />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
