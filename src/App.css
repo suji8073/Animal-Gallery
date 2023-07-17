@@ -6,3 +6,8 @@ img {
   width: 100px;
   height: 100px;
 }
+
+@font-face {
+  font-family: "OmYu";
+  src: url("./fonts/omyu.ttf");
+}
