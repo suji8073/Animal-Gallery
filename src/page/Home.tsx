@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 
 import Header from "../components/Header";
 import "../App.css";
+import Footer from "../components/Footer";
 
 function Home() {
   const [catImages, setCatImages] = useState<string[]>([]);
@@ -28,6 +29,7 @@ function Home() {
       {catImages.map((imageUrl: string) => (
         <img className="Image" src={imageUrl} alt="Cat" key={imageUrl} />
       ))}
+      <Footer />
     </div>
   );
 }
