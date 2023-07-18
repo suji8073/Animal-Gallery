@@ -1,10 +1,8 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { FaAdn } from "react-icons/fa";
 import { HiOutlineMenu } from "react-icons/hi";
-
-import Modal from "./Modal";
-import "../styles/Header.css";
+import * as S from "./styled";
+import Modal from "../modal/index";
 
 function Header() {
   const linkArray: string[] = ["CAT", "DOG", "OTHERS"];
@@ -15,27 +13,29 @@ function Header() {
   };
 
   return (
-    <div className="Header">
-      <div className="LeftView">
+    <S.Header id="Header">
+      <S.LeftView>
         {linkArray.map((link: string) => {
           return (
-            <span className="item" key={link}>
-              <Link to={`/${link}`}>{link}</Link>
-            </span>
+            <S.HeaderItem>
+              <Link to={`/${link}`} key={link}>
+                {link}
+              </Link>
+            </S.HeaderItem>
           );
         })}
-      </div>
+      </S.LeftView>
 
-      <a className="LogoView" href={"/"}>
-        <FaAdn className="Logo" color="#62fcdb" />
-      </a>
+      <S.LogoView href={"/"}>
+        <S.Logo />
+      </S.LogoView>
 
-      <div className="RightView">
+      <S.RightView>
         <HiOutlineMenu onClick={handleOpenModal} size={24} />
-      </div>
+      </S.RightView>
 
       {modal && <Modal handleModal={handleOpenModal} />}
-    </div>
+    </S.Header>
   );
 }
 

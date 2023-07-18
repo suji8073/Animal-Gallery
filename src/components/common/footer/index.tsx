@@ -1,9 +1,9 @@
-import * as S from "../styles/Footer";
-import { LeftData, RightData } from "../data/FooterData";
+import * as S from "./styled";
+import { LeftData, RightData } from "../../../data/FooterData";
 
 function Footer() {
   return (
-    <S.Footer>
+    <S.Footer id="Footer">
       <S.Container>
         <S.LogoView href={"/"}>
           <S.Logo />

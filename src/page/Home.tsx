@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 
-import Header from "../components/Header";
 import "../App.css";
-import Footer from "../components/Footer";
+import Header from "../components/common/header";
+import Footer from "../components/common/footer";
 
 function Home() {
   const [catImages, setCatImages] = useState<string[]>([]);
@@ -26,9 +26,47 @@ function Home() {
   return (
     <div className="App">
       <Header />
-      {catImages.map((imageUrl: string) => (
-        <img className="Image" src={imageUrl} alt="Cat" key={imageUrl} />
-      ))}
+      <div className="Body">
+        {catImages.map((imageUrl: string) => (
+          <img className="Image" src={imageUrl} alt="Cat" key={imageUrl} />
+        ))}
+        {catImages.map((imageUrl: string) => (
+          <img className="Image" src={imageUrl} alt="Cat" key={imageUrl} />
+        ))}{" "}
+        {catImages.map((imageUrl: string) => (
+          <img className="Image" src={imageUrl} alt="Cat" key={imageUrl} />
+        ))}{" "}
+        {catImages.map((imageUrl: string) => (
+          <img className="Image" src={imageUrl} alt="Cat" key={imageUrl} />
+        ))}{" "}
+        {catImages.map((imageUrl: string) => (
+          <img className="Image" src={imageUrl} alt="Cat" key={imageUrl} />
+        ))}{" "}
+        {catImages.map((imageUrl: string) => (
+          <img className="Image" src={imageUrl} alt="Cat" key={imageUrl} />
+        ))}{" "}
+        {catImages.map((imageUrl: string) => (
+          <img className="Image" src={imageUrl} alt="Cat" key={imageUrl} />
+        ))}{" "}
+        {catImages.map((imageUrl: string) => (
+          <img className="Image" src={imageUrl} alt="Cat" key={imageUrl} />
+        ))}{" "}
+        {catImages.map((imageUrl: string) => (
+          <img className="Image" src={imageUrl} alt="Cat" key={imageUrl} />
+        ))}{" "}
+        {catImages.map((imageUrl: string) => (
+          <img className="Image" src={imageUrl} alt="Cat" key={imageUrl} />
+        ))}{" "}
+        {catImages.map((imageUrl: string) => (
+          <img className="Image" src={imageUrl} alt="Cat" key={imageUrl} />
+        ))}{" "}
+        {catImages.map((imageUrl: string) => (
+          <img className="Image" src={imageUrl} alt="Cat" key={imageUrl} />
+        ))}{" "}
+        {catImages.map((imageUrl: string) => (
+          <img className="Image" src={imageUrl} alt="Cat" key={imageUrl} />
+        ))}
+      </div>
       <Footer />
     </div>
   );

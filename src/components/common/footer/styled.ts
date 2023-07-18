@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
-import { fonts } from "./themes/fonts";
 import { FaAdn } from "react-icons/fa";
-import { colors } from "./themes/colors";
+import { fonts } from "../../../styles/themes/fonts";
+import { colors } from "../../../styles/themes/colors";
 
 export const Footer = styled.div`
   width: 100%;
@@ -9,11 +9,6 @@ export const Footer = styled.div`
 
   display: flex;
   align-items: center;
-
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
 
   background-size: cover;
   background-repeat: no-repeat;
